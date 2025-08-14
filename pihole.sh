@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
+# sudo nano pihole.sh
+# sudo chmod u+x pihole.sh
+# sudo ./pihole.sh
 
 docker run -d \
     --name pihole \
@@ -13,7 +15,7 @@ docker run -d \
     -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
     --dns=127.0.0.1 --dns=1.1.1.1 \
     --restart=unless-stopped \
-    thenetworkchuck/networkchuck_pihole
+    homelab/homelab_pihole
 
 printf 'Starting up pihole container '
 for i in $(seq 1 20); do
