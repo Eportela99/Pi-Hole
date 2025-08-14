@@ -1,2 +1,5 @@
-#Installation
+# Installation
 sudo apt install docker.io
+
+# Check Docker Containers
+sudo docker ps
